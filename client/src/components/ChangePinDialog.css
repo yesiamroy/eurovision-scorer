@@ -1,0 +1,17 @@
+.pin-dialog-input {
+  width: 100%;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 18px;
+  letter-spacing: 8px;
+  color: var(--text);
+}
+.pin-dialog-input:focus { border-color: var(--accent); }
+.pin-dialog-input::placeholder { color: var(--text3); letter-spacing: normal; }
+
+.pin-dialog-error {
+  font-size: 13px;
+  color: var(--accent);
+}

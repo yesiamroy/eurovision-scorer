@@ -1,0 +1,16 @@
+# Works on any Docker host with `docker compose`. (Unraid has none; see CLAUDE.md.)
+version: '3.8'
+
+services:
+  eurovision-scorer:
+    build: .
+    container_name: eurovision-scorer
+    ports:
+      - "3001:3001"
+    volumes:
+      - /mnt/user/appdata/eurovision-scorer:/data
+    environment:
+      - PORT=3001
+      - DB_PATH=/data/scores.db
+      - HOST_PASSWORD=eurovision2026
+    restart: "no"

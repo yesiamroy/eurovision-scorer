@@ -1,0 +1,184 @@
+.delta-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delta-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--surface2);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.delta-screen {
+  min-height: 100vh;
+  background: var(--bg);
+  padding-bottom: max(40px, env(safe-area-inset-bottom));
+}
+
+.delta-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+}
+
+.delta-back {
+  background: var(--surface);
+  color: var(--text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delta-title {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.delta-summary {
+  display: flex;
+  gap: 1px;
+  background: var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.delta-stat {
+  flex: 1;
+  padding: 16px;
+  background: var(--bg2);
+  text-align: center;
+}
+
+.delta-stat-num {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.delta-stat-label {
+  font-size: 11px;
+  color: var(--text3);
+  margin-top: 2px;
+}
+
+.delta-empty {
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--text3);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.delta-list {
+  padding: 8px 0;
+}
+
+.delta-item {
+  border-bottom: 1px solid var(--border);
+  padding: 16px;
+}
+
+.delta-item-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.delta-flag { font-size: 24px; }
+
+.delta-act-info { flex: 1; }
+.delta-country {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.delta-song {
+  font-size: 11px;
+  color: var(--text3);
+  font-style: italic;
+}
+
+.delta-badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.delta-up { background: rgba(0,230,118,0.15); color: var(--green); }
+.delta-down { background: rgba(232,0,90,0.15); color: var(--accent); }
+.delta-same { background: var(--surface2); color: var(--text3); }
+
+.delta-scores {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+}
+
+.delta-score-col {
+  flex: 1;
+}
+
+.delta-col-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--text3);
+  margin-bottom: 6px;
+}
+
+.delta-score-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3px 8px;
+  font-size: 12px;
+  color: var(--text2);
+  align-items: center;
+}
+
+.delta-val {
+  font-weight: 700;
+  color: var(--text);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+}
+
+.delta-val.up { color: var(--green); }
+.delta-val.down { color: var(--accent); }
+
+.delta-total {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--text2);
+  margin-top: 8px;
+}
+
+.delta-total.up { color: var(--green); }
+.delta-total.down { color: var(--accent); }
+
+.delta-arrow {
+  font-size: 20px;
+  color: var(--text3);
+  flex-shrink: 0;
+}
